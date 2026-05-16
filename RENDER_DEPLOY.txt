@@ -1,0 +1,11 @@
+# Render Deployment Guide
+
+1. Upload this ZIP to GitHub.
+2. Open Render dashboard.
+3. Click New > Web Service.
+4. Connect GitHub repository.
+5. Render automatically detects Dockerfile.
+6. Deploy.
+
+No build command required.
+No start command required.

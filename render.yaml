@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: rozgar-portal
+    env: docker
+    plan: free
+    autoDeploy: true

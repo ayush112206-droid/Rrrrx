@@ -1,0 +1,45 @@
+# ── Disable directory listing ────────────────────────────────────
+Options -Indexes
+
+# ── Protect sensitive files ──────────────────────────────────────
+<Files "config.php">
+  Order allow,deny
+  Deny from all
+</Files>
+<Files ".htaccess">
+  Order allow,deny
+  Deny from all
+</Files>
+<FilesMatch "\.(json|log|txt|md)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ── Block data directory ─────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^data/ - [F,L]
+  RewriteRule ^data$  - [F,L]
+</IfModule>
+
+# ── PHP settings (no display_errors, hide version) ───────────────
+<IfModule mod_php8.c>
+  php_flag display_errors Off
+  php_flag expose_php Off
+  php_value error_reporting 0
+  php_value session.gc_maxlifetime 2592000
+  php_value session.cookie_lifetime 2592000
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag display_errors Off
+  php_flag expose_php Off
+  php_value error_reporting 0
+  php_value session.gc_maxlifetime 2592000
+  php_value session.cookie_lifetime 2592000
+</IfModule>
+
+# ── Default index ─────────────────────────────────────────────────
+DirectoryIndex index.php batches.php dashboard.php
+
+# NOTE: Security headers (X-Frame-Options, CSP, etc.) are sent by PHP
+# to avoid duplication with mod_headers. Do NOT add them here.
