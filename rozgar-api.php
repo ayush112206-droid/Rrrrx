@@ -337,7 +337,7 @@ function handle_video(int $vid, int $bid, string $q): void {
  * Handle PDF — decrypt server-side, return viewer URL
  */
 function handle_pdf(string $enc): void {
-    $viewer = 'https://mute-butterfly-7f12.techdesh5.workers.dev/pdf-viewer?url=';
+    $viewer = 'https://dark-rwa.vercel.app/player?url=';
     $raw = urldecode($enc);
 
     if (strpos($raw, 'http') === 0) {
