@@ -3,7 +3,7 @@ define('API_BASE',    'https://rozgarapinew.teachx.in');
 define('APP_NAME',    'Rozgar Learning');
 define('APP_TAGLINE', 'ROZGAR with Ankit · Official Portal');
 define('APP_VERSION', '4.0');
-define('TG_CHANNEL',  'https://t.me/DarkUniverse_OfficialChannel');
+define('TG_CHANNEL',  'https://t.me/+rmB8RrKIm8A0NGVl');
 define('TG_NAME',     'Dark Universe');
 define('WA_CHANNEL',  'https://whatsapp.com/channel/0029VbAvDSX0QeahEg4kkE3U');
 define('WA_NAME',     'Rozgar with Ankit');
