@@ -39,7 +39,7 @@ if(!$d){
 }
 if(!$d){ http_response_code(404); die('Video not found'); }
 
-$player='https://mute-butterfly-7f12.techdesh5.workers.dev/player?url=';
+$player='https://dark-rwa.vercel.app/player?url=';
 
 // YouTube
 if(!empty($d['video_id'])&&empty($d['download_link'])){
