@@ -16,6 +16,6 @@ if(empty($u)){
     if(strpos($u,'http')!==0){ http_response_code(400); die('Invalid link'); }
 }
 
-$viewer='https://mute-butterfly-7f12.techdesh5.workers.dev/pdf-viewer?url=';
+$viewer='https://dark-rwa.vercel.app/pdf-viewer?url=';
 header('Location: '.$viewer.urlencode($u));
 exit;
